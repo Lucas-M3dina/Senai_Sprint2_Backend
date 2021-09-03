@@ -7,7 +7,7 @@ namespace Senai_Rental_WebAPI.Domains
 {
     public class MarcaDomain
     {
-        public int idMarca;
-        public string nomeMarca;
+        public int idMarca { get; set; }
+        public string nomeMarca { get; set; }
     }
 }

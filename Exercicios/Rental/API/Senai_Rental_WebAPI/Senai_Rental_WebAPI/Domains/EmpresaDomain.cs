@@ -7,8 +7,8 @@ namespace Senai_Rental_WebAPI.Domains
 {
     public class EmpresaDomain
     {
-        public int idEmpresa;
-        public string nomeEmpresa;
+        public int idEmpresa { get; set; }
+        public string nomeEmpresa { get; set; }
 
     }
 }

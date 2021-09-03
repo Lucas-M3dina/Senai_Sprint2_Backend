@@ -19,23 +19,23 @@ GO
 SELECT * FROM Aluguel;
 GO
 
-SELECT DataRetirada, DataDevolucao, NomeCliente, SobrenomeCliente, NomeModelo
+SELECT dataRetirada, dataDevolucao, nomeCliente, sobrenomeCliente, nomeModelo
 FROM Aluguel
 LEFT JOIN Cliente
-ON Aluguel.IdCliente = Cliente.IdCliente
+ON Aluguel.idCliente = Cliente.idCliente
 LEFT JOIN Veiculo
-ON Aluguel.IdVeiculo = Veiculo.IdVeiculo
+ON Aluguel.idVeiculo = Veiculo.idVeiculo
 LEFT JOIN Modelo
-ON Veiculo.IdModelo = Modelo.IdModelo;
+ON Veiculo.idModelo = Modelo.idModelo;
 GO
 
-SELECT NomeCliente, SobrenomeCliente, DataRetirada, DataDevolucao, NomeModelo
+SELECT nomeCliente, sobrenomeCliente, dataRetirada, dataDevolucao, nomeModelo
 FROM Aluguel
 RIGHT JOIN Cliente
-ON Aluguel.IdCliente = Cliente.IdCliente
+ON Aluguel.idCliente = Cliente.idCliente
 LEFT JOIN Veiculo
-ON Aluguel.IdVeiculo = Veiculo.IdVeiculo
+ON Aluguel.idVeiculo = Veiculo.idVeiculo
 LEFT JOIN Modelo
-ON Veiculo.IdModelo = Modelo.IdModelo
-WHERE NomeCliente = 'Lucas';
+ON Veiculo.idModelo = Modelo.idModelo
+WHERE nomeCliente = 'Lucas';
 GO
