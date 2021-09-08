@@ -20,7 +20,7 @@ CREATE TABLE Modelo(
 	idModelo INT PRIMARY KEY IDENTITY(1,1),
 	idMarca INT FOREIGN KEY REFERENCES Marca(IdMarca),
 	nomeModelo VARCHAR(12),
-	anoLancamento DATE
+	anoLancamento DATETIME
 );
 GO
 
@@ -45,7 +45,7 @@ CREATE TABLE Aluguel(
 	idAluguel INT PRIMARY KEY IDENTITY(1,1),
 	idVeiculo INT FOREIGN KEY REFERENCES Veiculo(IdVeiculo),
 	idCliente INT FOREIGN KEY REFERENCES Cliente(IdCliente),
-	dataRetirada DATE,
-	dataDevolucao DATE
+	dataRetirada DATETIME,
+	dataDevolucao DATETIME
 );
 GO
